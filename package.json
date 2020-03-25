@@ -37,5 +37,56 @@
     "react-dom": "^16.10.2",
     "react-scripts": "^3.4.1",
     "typescript": "3.6.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "prettier/react",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/no-explicit-any": [
+        "error"
+      ],
+      "@typescript-eslint/explicit-function-return-type": [
+        "error"
+      ],
+      "react/jsx-filename-extension": "off",
+      "import/extensions": "off",
+      "import/prefer-default-export": "off",
+      "react/button-has-type": "off",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": ["**/*.spec.ts?", "**/*.tsx?"],
+          "peerDependencies": true
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
   }
 }

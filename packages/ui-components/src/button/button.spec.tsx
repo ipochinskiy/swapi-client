@@ -4,12 +4,7 @@ import { Button } from './button';
 
 describe('UI Components: Button', () => {
   it('should render a button with "type" and "label"', () => {
-    const props = {
-      type: 'submit' as const,
-      label: 'Thanos rocks!!',
-    };
-
-    const component = shallow(<Button {...props} />);
+    const component = shallow(<Button type="submit" label="Thanos rocks!!" />);
     const button = component.find('button');
 
     expect(button.prop('type')).toEqual('submit');
@@ -17,11 +12,7 @@ describe('UI Components: Button', () => {
   });
 
   it('should render a button with a default "type"', () => {
-    const props = {
-      label: 'Thanos rocks!!',
-    };
-
-    const component = shallow(<Button {...props} />);
+    const component = shallow(<Button label="Thanos rocks!!" />);
     const button = component.find('button');
 
     expect(button.prop('type')).toEqual('button');
