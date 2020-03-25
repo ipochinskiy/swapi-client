@@ -9,6 +9,7 @@
     "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:once": "CI=true npm test -- --runInBand",
     "eject": "react-scripts eject"
   },
   "peerDependencies": {
@@ -17,6 +18,8 @@
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
     "customize-cra": "^0.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "react": "^16.13.1",
     "react-dom": "^16.10.2",
     "react-scripts": "^3.4.1",
@@ -32,6 +35,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
     ]
   }
 }

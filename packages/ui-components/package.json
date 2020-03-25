@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "main": "src/",
+  "scripts": {
+    "test": "jest --watch",
+    "test:once": "jest --watch=false"
+  },
   "peerDependencies": {
     "@types/jest": "24.0.19",
     "@types/node": "12.11.1",
@@ -14,5 +18,19 @@
     "react-dom": "^16.10.2",
     "react-scripts": "^3.4.1",
     "typescript": "3.6.4"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "setupFilesAfterEnv": [
+      "./setupTests.ts"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ]
   }
 }
