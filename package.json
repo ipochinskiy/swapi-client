@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "npx lerna clean -y && npx lerna bootstrap",
     "lerna": "lerna"
   },
   "devDependencies": {
