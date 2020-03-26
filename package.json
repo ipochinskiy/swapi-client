@@ -5,8 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "npx lerna clean -y && npx lerna bootstrap",
-    "lerna": "lerna"
+    "bootstrap": "lerna clean -y && lerna bootstrap --use-workspaces",
+    "lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
+    "test": "lerna run test:once --parallel"
   },
   "devDependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.5",
