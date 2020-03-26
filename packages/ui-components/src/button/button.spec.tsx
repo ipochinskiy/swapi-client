@@ -4,7 +4,7 @@ import { Button } from './button';
 
 describe('UI Components: Button', () => {
   it('should render a button with "type" and "label"', () => {
-    const component = shallow(<Button type="submit" label="Thanos rocks!!" />);
+    const component = shallow(<Button type="submit">Thanos rocks!!</Button>);
     const button = component.find('button');
 
     expect(button.prop('type')).toEqual('submit');
@@ -12,7 +12,7 @@ describe('UI Components: Button', () => {
   });
 
   it('should render a button with a default "type"', () => {
-    const component = shallow(<Button label="Thanos rocks!!" />);
+    const component = shallow(<Button>Thanos rocks!!</Button>);
     const button = component.find('button');
 
     expect(button.prop('type')).toEqual('button');

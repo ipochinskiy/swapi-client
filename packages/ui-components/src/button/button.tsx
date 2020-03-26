@@ -1,10 +1,9 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, PropsWithChildren } from 'react';
 
-type PropTypes = {
+type PropTypes = PropsWithChildren<{
   type?: 'button' | 'submit' | 'reset';
-  label: string;
-};
+}>;
 
-export const Button: React.FC<PropTypes> = ({ type = 'button', label }: PropTypes): ReactElement => {
-  return <button type={type}>{label}</button>;
+export const Button: React.FC<PropTypes> = ({ type = 'button', children }: PropTypes): ReactElement => {
+  return <button type={type}>{children}</button>;
 };
