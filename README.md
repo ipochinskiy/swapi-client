@@ -91,3 +91,12 @@ Some packages depend on sibling packages within the monorepo. For example, in th
   "@swapi/ui-components": "<package version>"
 }
 ```
+
+## Further readings
+
+* https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces/
+* https://medium.com/hy-vee-engineering/creating-a-monorepo-with-lerna-yarn-workspaces-cf163908965d
+* https://michalzalecki.com/solve-code-sharing-and-setup-project-with-lerna-and-monorepo/
+* https://blog.8bitzen.com/posts/2019-06-04-using-lerna-with-create-react-app-babel-and-a-server
+* https://www.jannikbuschke.de/blog/monorepo-with-lerna-react-and-typescript/
+* https://github.com/NiGhTTraX/lerna-ts
